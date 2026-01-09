@@ -1,0 +1,20 @@
+[mypy]
+# --- ONLY the errors we care about ---
+enable_error_code = attr-defined, import
+disable_error_code = import-untyped
+
+# --- Keep analysis clean (no typing noise) ---
+check_untyped_defs = False
+disallow_untyped_defs = False
+ignore_missing_imports = True
+warn_unused_ignores = False
+
+# --- Import resolution stability ---
+explicit_package_bases = True
+namespace_packages = False
+
+# --- Output clarity ---
+show_error_codes = True
+pretty = True
+
+#simple
